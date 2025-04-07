@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { globalStyles } from '../../theme/them';
 import { useNavigation } from '@react-navigation/native';
-import { PrimaryButton } from '../../components/shared/primaryButton';
+import { PrimaryButton } from '../../components/shared/PrimaryButton';
 
 
 const HomeScreen = () => {
@@ -20,6 +20,11 @@ const HomeScreen = () => {
         onPress={() => navigation.navigate('Profile' as never)}
         label="Ir a productos"
       />
+
+      <PrimaryButton
+        onPress={() => navigation.navigate('Settings' as never)}
+        label="Ir a configuración"
+      />  
 
       {/* <PrimaryButton
         onPress={() => navigation.navigate('Profile' as never)}
