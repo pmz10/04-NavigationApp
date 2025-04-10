@@ -18,13 +18,18 @@ const HomeScreen = () => {
       </Pressable> */}
       <PrimaryButton
         onPress={() => navigation.navigate('Profile' as never)}
-        label="Ir a productos"
+        label="Ir a Perfil"
       />
 
       <PrimaryButton
         onPress={() => navigation.navigate('Settings' as never)}
-        label="Ir a configuración"
-      />  
+        label="Ir a Ajustes"
+      />
+
+      <PrimaryButton
+        onPress={() => navigation.navigate('Products' as never)}
+        label="Ir a Productos"
+      />
 
       {/* <PrimaryButton
         onPress={() => navigation.navigate('Profile' as never)}
