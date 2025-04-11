@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { globalStyles } from '../../theme/them';
-import { useNavigation } from '@react-navigation/native';
+import { type NavigationProp, useNavigation } from '@react-navigation/native';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
+import type { RootSctackParams } from '../../routes/StackNavigator';
 
 
 const HomeScreen = () => {
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<RootSctackParams>>();
 
   return (
     <View style={globalStyles.container}>
@@ -17,17 +18,17 @@ const HomeScreen = () => {
         <Text style={globalStyles.buttonText}>Ir a productos</Text>
       </Pressable> */}
       <PrimaryButton
-        onPress={() => navigation.navigate('Profile' as never)}
+        onPress={() => navigation.navigate('Profile')}
         label="Ir a Perfil"
       />
 
       <PrimaryButton
-        onPress={() => navigation.navigate('Settings' as never)}
+        onPress={() => navigation.navigate('Settings')}
         label="Ir a Ajustes"
       />
 
       <PrimaryButton
-        onPress={() => navigation.navigate('Products' as never)}
+        onPress={() => navigation.navigate('Products')}
         label="Ir a Productos"
       />
 
